@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: content-box tashqariga suriladi kattalawib ketadi; */
+    /* padding bersa ichkaridan olinadi */
+    font-family: sans-serif;
+}
+html{
+    font-size: 12px;
+    /* rem-html dan(eng katta tagdan) meros oladi */
+}
+body{
+    min-height: 500vh;
+}
+.main{
+    width: 800px;
+    height: 50vh;
+    /* parentga width % larda berilmaydi. It is incorrect.Doim px da beriw kk */
+    /* min-height=height auto bergan yaxshi */
+    height: 100%;
+    height: 400px;
+    /* vh=viewport height  ekranga qarab ishlaydi*/ 
+    border: 1px solid red;
+    margin: auto;
+}
+.child{
+    width: 50%;
+    background: dodgerblue;
+    height: 50%;
+}
+.child2{
+    width: 100px;
+    width: 50vw;
+    /* viewport width  is similar to vh */
+    height: 100px;
+    background: violet;
+}
+.title{
+    text-align: center;
+    font-size: 2rem;
+    /* 1rem-16px */
+    margin-top: 1.5rem;
+
+    /* 1em--16px */
+    /* em-ozidan katta tagdan meros oladi */
+    margin-bottom: 2em;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background: gold;
+    padding: 20px;
+    border: 10px solid red;
+    box-sizing: content-box;
+}
+.wrapper{
+    width: 80%;
+    border: 1px solid red;
+    height: 400px;
+    margin: 30px auto;
+    position: relative;
+}
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: turquoise;
+    position: relative;
+    top: 0;
+    left: 150px;
+}
+/* Position types
+1.static===by default
+/* 2.relative
+3.absolute
+4.sticky
+5.fixed */
+.card2,
+.card3{
+    width: 100px;
+    height: 100px;
+    background:red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+}
+.card3{
+    right: 50px;
+    background: gold;
+    z-index: 3;
+}
+.card2{
+    z-index: 2;
+}
+/* z-index katta bolsa ustiga ciqadi */
+.nav{
+    width: 100%;
+    height: 50px;
+    background: blue;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.ads{
+    width: 200px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    color: gold;
+    font-size: 2rem;
+    position: fixed;
+}
